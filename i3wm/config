@@ -17,12 +17,26 @@ exec_always --no-startup-id feh --bg-fill ~/Downloads/myKMAC.jpg
 
 #Define display locations at i3 startup with xrandr
 
-exec --no-startup-id xrandr --output HDMI-0 --auto --left-of DP-0
-exec --no-startup-id xrandr --output DP-2 --auto --right-of DP-0 --rotate left
+exec_always --no-startup-id xrandr --output HDMI-0 --auto --left-of DP-0
+exec_always --no-startup-id xrandr --output DP-2 --auto --right-of DP-0 --rotate left
 
 #Start notification Daemon Dunst at startup, to fix Discord freezing when it doesn't know what to do with a notification.
 
-exec --no-startup-id dunst
+exec_always --no-startup-id dunst
+
+#Startup launches
+
+exec_always --no-startup-id discord
+
+#Always launch discord on portrait display.
+
+assign [class="discord"] 3
+
+#This configuration directive enables automatic workspace back_and_forth (see [back_and_forth]) when switching to the workspace 
+#that is currently focused. For instance: Assume you are on workspace "1: www" and switch to "2: IM" using mod+2 because somebody 
+#sent you a message. You don’t need to remember where you came from now, you can just press $mod+2 again to switch back to "1: www".
+
+workspace_auto_back_and_forth yes
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.

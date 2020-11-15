@@ -17,8 +17,10 @@ set incsearch
 
 "set noswapfile
 "set nobackup
-"set undodir=~/.vim/undodir
+"set undodir=~/.vim/undodir "this dir must be made manually
 "set undofile
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+"look into 'vim plugged' plugin manager

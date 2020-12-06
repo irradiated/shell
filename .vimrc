@@ -23,4 +23,4 @@ set incsearch
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-"look into 'vim plugged' plugin manager & Valloric/YouCompleteMe.git
+"look into 'vim plugged' plugin manager & Valloric/YouCompleteMe.git, undotree

@@ -20,10 +20,13 @@ BEGIN {
         {
             bonus += $x
         }
+
         name = $1 " " $2
         indTotal = ($5 * $6) + bonus
-        printf "%s\t%s\t\t$%s\n", name, $3, indTotal
+        printf "%-10s\t%-10s\t$%8.2f\n", name, $3, indTotal
         bonus = 0
+
+        #TODO; code to total business, admin, vancouver
     }
 
 }
